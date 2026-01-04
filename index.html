@@ -4,8 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design Web Root</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .hero{
+            height: 100vh;
+            background: yellowgreen;
+            display: grid;
+            place-content: center;
+            text-align: center;
+        }
+        
+        h1, h6, h2 {
+    font-size: 105px;
+    font-family: fantasy;
+    font-weight: 100;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+h6 {
+    font-size: 44px;
+}
+h2{
+            font-size: 80px;
+        }
+        
+.border {
+    width: 100px;
+    height: 2px;
+    background: #000;
+    margin: 10px auto 3px;
+}
+
+p {
+    font-size: 38px;
+    text-transform: uppercase;
+    font-family: ui-serif;
+}
+h5 {
+    font-size: 90px;
+}
+    </style>
 </head>
 <body>
-    <h1>Website is under maintenance</h1>
+    <div class="hero">
+        <h5>&#9812;</h5>
+        <h2>website</h2>
+        <h1>under</h1>
+        <h6>construction</h6>
+        <div class="border"></div>
+        <p>coming soon</p>
+    </div>
 </body>
 </html>
