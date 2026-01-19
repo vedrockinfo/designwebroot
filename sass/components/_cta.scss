@@ -1,0 +1,72 @@
+@use "../abstracts" as *;
+
+.ctaWrapper {
+    text-align: center;
+    color: $colorWhite;
+    background: $colorPrimary;
+    padding: 10rem 5rem;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40rem;
+        height: 40rem;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 100%;
+        aspect-ratio: 1 / 1;
+        z-index: 1;
+        transform: translate(-50%, 50%);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40rem;
+        height: 40rem;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 100%;
+        aspect-ratio: 1 / 1;
+        z-index: 1;
+        transform: translate(50%, -50%);
+    }
+
+    p {
+        color: $colorWhite;
+    }
+
+    .linkWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        a {
+            &:first-child {
+                @include btnLight();
+                background: $colorWhite;
+                border-color: $colorWhite;
+            }
+
+            &:last-child {
+                @include btnLight();
+                background: transparent;
+                border-color: $colorWhite;
+                color: $colorWhite;
+
+                &:hover {
+                    color: $colorPrimary;
+                    background: $colorWhite;
+                    border-color: $colorWhite;
+                }
+            }
+        }
+    }
+}

@@ -1,63 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design Web Root</title>
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        .hero{
-            height: 100vh;
-            background: yellowgreen;
-            display: grid;
-            place-content: center;
-            text-align: center;
-        }
-        
-        h1, h6, h2 {
-    font-size: 105px;
-    font-family: fantasy;
-    font-weight: 100;
-    text-transform: uppercase;
-    line-height: 1;
-}
-
-h6 {
-    font-size: 44px;
-}
-h2{
-            font-size: 80px;
-        }
-        
-.border {
-    width: 100px;
-    height: 2px;
-    background: #000;
-    margin: 10px auto 3px;
-}
-
-p {
-    font-size: 38px;
-    text-transform: uppercase;
-    font-family: ui-serif;
-}
-h5 {
-    font-size: 90px;
-}
-    </style>
+    <meta name="language" content="English">
+    <meta name="robots" content="index, follow">
+    <title>Web Design & Development Company in India | Design Web Root</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <meta name="description"
+        content="Professional web design, development, SEO & website maintenance services in India. Pixel-perfect, PSD to HTML, PSD to Wordpress, Website maintenance in India, fast and SEO-friendly websites.">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <!-- Menu Script -->
+    <script src="assets/js/myMenu.js"></script>
 </head>
+
 <body>
-    <div class="hero">
-        <h5>&#9812;</h5>
-        <h2>website</h2>
-        <h1>under</h1>
-        <h6>construction</h6>
-        <div class="border"></div>
-        <p>coming soon</p>
-    </div>
+    <script>mainHeader()</script>
+    <main>
+        <section class="heroSection pBottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col6">
+                        <div class="heroContent">
+                            <h1>Crafting <span>High Performance Websites</span></h1>
+                            <p>Web Designer with 5+ Years Experience</p>
+                            <p>WordPress | Static | Responsive | SEO-Friendly</p>
+                            <div class="btnWrapper">
+                                <a href="#">Get Free Consultation <i class="fa-solid fa-arrow-right-long"></i></a><a
+                                    href="#">View My Work</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col6">
+                        <div class="imgWrapper">
+                            <div class="projects">
+                                <span>100+ Projects</span>
+                            </div>
+                            <img src="images/hero-01.png" alt="Professional web design services in India"
+                                loading="lazy">
+                            <div class="optimized">
+                                <span><i class="fa-brands fa-searchengin"></i> SEO Optimized</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="whatIdo mTop">
+            <div class="container">
+                <div class="sectionTitle">
+                    <h6 class="subHeading">What We Do</h6>
+                    <h2 class="headingPrimary">Services That <span>Drive Growth</span></h2>
+                    <p class="headPara">From concept to launch, I deliver web solutions that help businesses succeed
+                        online.</p>
+                </div>
+                <div class="row">
+                    <div class="col3">
+                        <div class="serviceCard">
+                            <div class="serviceCard__icon"><i class="fa-solid fa-globe"></i></div>
+                            <div class="serviceCard__Content">
+                                <h3 class="headingTertiary">Website Design</h3>
+                                <p>Beautiful, responsive websites that captivate your audience and drive results.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col3">
+                        <div class="serviceCard">
+                            <div class="serviceCard__icon"><i class="fa-solid fa-code"></i></div>
+                            <div class="serviceCard__Content">
+                                <h3 class="headingTertiary">WordPress Development</h3>
+                                <p>Custom WordPress solutions with powerful themes and seamless functionality.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col3">
+                        <div class="serviceCard">
+                            <div class="serviceCard__icon"><i class="fa-solid fa-rocket"></i></div>
+                            <div class="serviceCard__Content">
+                                <h3 class="headingTertiary">Landing Pages</h3>
+                                <p>High-converting landing pages designed to turn visitors into customers.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col3">
+                        <div class="serviceCard">
+                            <div class="serviceCard__icon"><i class="fa-solid fa-wrench"></i></div>
+                            <div class="serviceCard__Content">
+                                <h3 class="headingTertiary">SEO & Maintenance</h3>
+                                <p>Ongoing optimization and support to keep your website performing at its best.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spaceS"></div>
+                <div class="textCenter">
+                    <a href="#" class="btnDark">View All Services <i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+            </div>
+        </section>
+        <section class="counterArea mTop" id="counterSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col3">
+                        <div class="stat">
+                            <i class="fa-solid fa-user-group"></i>
+                            <h2 class="counter" data-target="150" data-suffix="+">0</h2>
+                            <p>Clients Served</p>
+                        </div>
+                    </div>
+                    <div class="col3">
+                        <div class="stat">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <h2 class="counter" data-target="320" data-suffix="%">0</h2>
+                            <p>Average ROI</p>
+                        </div>
+                    </div>
+                    <div class="col3">
+                        <div class="stat">
+                            <i class="fa-solid fa-bullseye"></i>
+                            <h2 class="counter" data-target="50" data-suffix="M+">0</h2>
+                            <p>Leads Generated</p>
+                        </div>
+                    </div>
+                    <div class="col3">
+                        <div class="stat">
+                            <i class="fa-solid fa-award"></i>
+                            <h2 class="counter" data-target="15" data-suffix="+">0</h2>
+                            <p>Industry Awards</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="whoWeAre mTop">
+            <div class="container">
+                <div class="sectionTitle">
+                    <h6 class="subHeading"></h6>
+                    <h2 class="headingPrimary"><span>who we</span> are?</h2>
+                    <p class="headPara">Professional Websites for Future Business Growth</p>
+                </div>
+                <div class="row">
+                    <div class="col5">
+                        <p><strong>Design Web Root</strong> is a India based web design studio with 5+ years of
+                            experience in crafting modern, responsive, and performance-driven websites.</p>
+                        <p>We work with a powerful stack of modern web technologies to build fast, responsive, and
+                            scalable websites. Our expertise includes HTML5 and CSS3 with SASS, ensuring clean code and
+                            pixel-perfect layouts. We use JavaScript and jQuery to create interactive, user-friendly
+                            interfaces, along with Bootstrap for responsive and mobile-first design.</p>
+                        <p>We specialize in WordPress custom themes, performance optimization, Angular-powered web
+                            applications, and Photoshop-driven UI/UX design with strong visual branding.</p>
+                        <div class="linkWrapper">
+                            <a href="about.html">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
+                    <div class="col7">
+                        <div class="imgWrapper">
+                            <img src="images/work-01.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="recentWork mTop">
+            <div class="container">
+                <div class="sectionTitle">
+                    <h6 class="subHeading">what best we have made</h6>
+                    <h2 class="headingPrimary">Recent Projects</h2>
+                    <p class="headPara">We deliver technically robust, SEO-ready Websites</p>
+                </div>
+                <div class="row">
+                    <div class="col4">
+                        <a href="https://luminaterra.org" target="_blank" class="projectCard">
+                            <figure>
+                                <img src="images/lt-01.jpg" alt="">
+                            </figure>
+                            <div class="content">
+                                <h3 class="headingSecondary">Lumina Terra</h3>
+                                <p>Lumina Terra is a distinguished educational institution nestled in the vibrant city
+                                    of Lucknow, India.</p>
+                                <span class="visit">visit <i class="fa-solid fa-up-right-from-square"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col4">
+                        <a href="https://getilearn.org" target="_blank" class="projectCard">
+                            <figure>
+                                <img src="images/geti-01.jpg" alt="">
+                            </figure>
+                            <div class="content">
+                                <h3 class="headingSecondary">GETI</h3>
+                                <p>Global Education & Training Institute (GETI): Transforming Education, Empowering
+                                    Educators.</p>
+                                <span class="visit">visit <i class="fa-solid fa-up-right-from-square"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col4">
+                        <a href="https://dignityeducation.org" target="_blank" class="projectCard">
+                            <figure>
+                                <img src="images/devi-01.jpg" alt="">
+                            </figure>
+                            <div class="content">
+                                <h3 class="headingSecondary">DEVI Sansthan</h3>
+                                <p>Dignity Education Vision International (DEVI) is a global non-profit organization
+                                    registered in India and the US.</p>
+                                <span class="visit">visit <i class="fa-solid fa-up-right-from-square"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="whyWork mTop pTop pBottom">
+            <div class="container">
+                <div class="sectionTitle">
+                    <h6 class="subHeading">Why Choose Us</h6>
+                    <h2 class="headingPrimary">The Difference I Bring</h2>
+                    <p class="headPara">When you choose to work with me, you get more than just a website.</p>
+                </div>
+                <div class="row">
+                    <div class="col4">
+                        <div class="workCard">
+                            <div class="workCard__icon"><i class="fa-solid fa-palette"></i></div>
+                            <div class="workCard__Content">
+                                <h3 class="headingSecondary">Pixel-Perfect Design</h3>
+                                <p>Every element meticulously crafted for visual excellence.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col4">
+                        <div class="workCard">
+                            <div class="workCard__icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                            <div class="workCard__Content">
+                                <h3 class="headingSecondary">Mobile-First Approach</h3>
+                                <p>Websites that look stunning on every device and screen size</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col4">
+                        <div class="workCard">
+                            <div class="workCard__icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                            <div class="workCard__Content">
+                                <h3 class="headingSecondary">SEO Optimized Code</h3>
+                                <p>Built-in optimization for better search engine visibility.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col4">
+                        <div class="workCard">
+                            <div class="workCard__icon"><i class="fa-regular fa-clock"></i></div>
+                            <div class="workCard__Content">
+                                <h3 class="headingSecondary">Fast Turnaround</h3>
+                                <p>Quality work delivered on time, every time.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col4">
+                        <div class="workCard">
+                            <div class="workCard__icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                            <div class="workCard__Content">
+                                <h3 class="headingSecondary">Affordable Pricing</h3>
+                                <p>Competitive rates without compromising on quality.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col4">
+                        <div class="workCard">
+                            <div class="workCard__icon"><i class="fa-solid fa-check"></i></div>
+                            <div class="workCard__Content">
+                                <h3 class="headingSecondary">100% Satisfaction</h3>
+                                <p>Your vision brought to life with complete dedication.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="cta mTop">
+            <div class="container">
+                <div class="ctaWrapper">
+                    <h2 class="headingPrimary">Need a Website That Brings Leads?</h2>
+                    <p class="headPara">Let's discuss your project and create something amazing together.</p>
+                    <div class="linkWrapper"><a href="#">Let's Discuss Your Project <i
+                                class="fa-solid fa-arrow-right-long"></i></a><a href="#">WhatsApp Now <i
+                                class="fa-brands fa-whatsapp"></i></a></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>mainFooter()</script>
+
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>

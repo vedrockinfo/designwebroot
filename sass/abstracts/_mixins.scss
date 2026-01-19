@@ -1,0 +1,56 @@
+@use './variables' as *;
+@use './responsive' as *;
+
+@mixin btnHeader {
+  background: $colorPrimary;
+  color: $colorWhite;
+  padding: 1rem 3rem;
+  border: 2px solid;
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-color: $colorPrimary;
+  transition: $transition;
+
+  &:hover {
+    background: $colorWhite;
+    color: $colorPrimary;
+  }
+}
+
+@mixin btnDark {
+  background: $colorPrimary;
+  padding: 15px 30px;
+  border: 2px solid;
+  border-color: $colorPrimary;
+  font-weight: 600;
+  color: $colorWhite;
+  transition: $transition;
+  display: inline-block;
+  font-size: 16px;
+  box-shadow: $boxShadow;
+
+  &:hover {
+    background: transparent;
+    color: $colorPrimary;
+    transform: translateY(-1.5px);
+  }
+}
+
+@mixin btnLight {
+  background: transparent;
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid;
+  border-color: $colorPrimary;
+  font-weight: 600;
+  color: $colorPrimary;
+  transition: $transition;
+  font-size: 16px;
+
+  &:hover {
+    background: $colorPrimary;
+    color: $colorWhite;
+    transform: translateY(-1.5px);
+  }
+}

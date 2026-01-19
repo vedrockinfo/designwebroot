@@ -1,0 +1,46 @@
+@use "../abstracts" as *;
+
+.myPortfolio {
+    .portfolioGrid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+
+        &__Item {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+
+            input[type="radio"] {
+                display: none;
+                &:checked + label {
+                    background: $colorPrimary;
+                    color: $colorWhite;
+                }
+            }
+
+            label {
+                display: block;
+                cursor: pointer;
+                text-transform: uppercase;
+                font-size: $defaultFontSize;
+                background: $colorWhite;
+                font-weight: 700;
+                box-shadow: $boxShadow;
+                padding: 8px 15px;
+                transition: border 0.3s ease;
+
+                &:hover{
+                    background: $colorPrimary;
+                    color: $colorWhite;
+                }
+            }
+        }
+    }
+
+    .projectGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+}

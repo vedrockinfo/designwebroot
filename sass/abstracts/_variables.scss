@@ -1,0 +1,28 @@
+@use '../base/fonts' as *;
+
+$colorPrimary:orangered;
+$colorSecondary:rgb(17, 208, 17);
+$colorHeading:#222222;
+$colorText:#4c5567;
+$colorDark:#1e1e1f;
+$colorWhite:#ffffff;
+$colorLightPrimary:#ff45003d;
+$colorSeparator:#969696;
+$colorBg:#071233;
+$colorFooterBg:#f1f1f2;
+
+$gradientOne:linear-gradient(90deg, rgba(0, 4, 40, 1) 0%, rgba(0, 78, 146, 1) 100%);
+$gradientTwo:linear-gradient(to bottom right, #404040 0%, #40404000 50%);
+// FONT
+$fontPrimary:"Poppins", sans-serif;
+
+
+$defaultFontSize: 1.5rem;
+
+$transition : 0.4s;
+
+$boxShadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+$boxShadowTwo:0 0 30px rgba(0,0,0,.18);
+
+$gridColumns: 12;
+$gutter: 1.5rem;

@@ -1,0 +1,23 @@
+{
+  "name": "designwebroot",
+  "version": "1.0.0",
+  "description": "Something Design by Vedant on Front",
+  "homepage": "https://github.com/vedrockinfo/designwebroot#readme",
+  "bugs": {
+    "url": "https://github.com/vedrockinfo/designwebroot/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vedrockinfo/designwebroot.git"
+  },
+  "license": "ISC",
+  "author": "Vedant Gupta Designer",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass sass/main.scss assets/css/style.min.css --style=compressed --watch"
+  },
+  "dependencies": {
+    "sass": "^1.97.1"
+  }
+}

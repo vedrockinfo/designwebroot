@@ -1,0 +1,32 @@
+@use '../abstracts' as *;
+@use 'sass:color';
+
+.whatIdo{
+    .btnDark{
+        @include btnDark();
+    }
+}
+
+.whyWork{
+    background: $colorBg;
+    .headingPrimary, .headPara{
+        color: $colorWhite;
+    }
+    .row{
+        row-gap: 1rem;
+    }
+    p{
+        color: color.adjust($colorWhite, $lightness: -40%)!important;
+    }
+}
+.whoWeAre{
+    .linkWrapper{
+        margin-top: 3rem;
+        @include respond(maxWidth992){
+            text-align: center
+        }
+        a{
+            @include btnDark();
+        }
+    }
+}

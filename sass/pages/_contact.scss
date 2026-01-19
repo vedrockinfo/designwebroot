@@ -1,0 +1,47 @@
+@use "../abstracts" as *;
+
+.contactMe {
+    .contactWrap {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2.5rem;
+
+        .icon {
+            width: 5rem;
+            aspect-ratio: 1 / 1;
+            border-radius: 1rem;
+            background: $colorLightPrimary;
+            display: grid;
+            place-content: center;
+
+            i {
+                font-size: 2rem;
+                color: $colorPrimary;
+            }
+        }
+
+        .detail {
+            margin-left: 2rem;
+
+            .headingTertiary {
+                margin-bottom: 0;
+            }
+
+            a,
+            p,
+            address {
+                font-size: $defaultFontSize;
+                color: $colorDark;
+                text-decoration: none;
+                display: block;
+                font-style: normal;
+            }
+
+            a {
+                &:hover {
+                    color: $colorPrimary;
+                }
+            }
+        }
+    }
+}

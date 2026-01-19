@@ -1,0 +1,34 @@
+@use "../abstracts/" as *;
+
+.counterArea{
+    background: $colorPrimary;
+    padding: 7rem 0;
+    .stat{
+        text-align: center;
+        i{
+            color: $colorWhite;
+            font-size: 3.6rem;
+            margin-bottom: 2rem;
+        }
+        h2{
+            color: $colorWhite;
+            font-weight: 700;
+            font-size: 4rem;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            @include respond (maxWidth575){
+            font-size: 3rem;
+            font-weight: 900;
+        }
+        }
+        p{
+            color: $colorWhite;
+            text-transform: capitalize;
+            display: inline-block;
+            color: $colorPrimary;
+            padding:  0.4rem 1rem;
+            background: $colorWhite;
+            font-weight: 700;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@use "../abstracts" as *;
+@use 'sass:color';
+
+.progressGrid{
+    display: grid;
+    gap: 1rem;
+    .progressItem{
+        label{
+            display: block;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: $defaultFontSize;
+        }
+        .progressBar{
+            width: 100%;
+            height: 2rem;
+            background: #ccc;
+            border-radius: 1rem;
+            overflow: hidden;
+            .progressFill{
+                height: 100%;
+                width: 0;
+                background: var(--prgclr);
+                border-radius: 1rem;
+                transition: width 1.5s ease;
+                background-size: 1.6rem 1.6rem;
+                background-repeat: no-repeat;
+                position: relative;
+                animation: fillBar 3s ease-in-out forwards, stripeMove 1s infinite linear;
+                .progressText{
+                    position: absolute;
+                    left: 1rem;
+                    top: 0;
+                    font-size: 1.4rem;
+                    color: $colorWhite;
+                    font-weight: bold;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+}

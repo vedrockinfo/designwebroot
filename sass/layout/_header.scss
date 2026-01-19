@@ -1,0 +1,193 @@
+@use '../abstracts' as *;
+
+header {
+    padding: 2rem 0;
+    z-index: 99;
+    transition: $transition;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    img {
+        width: 23rem;
+        transition: $transition;
+    }
+
+    &.scrolled {
+        background: $colorWhite;
+        box-shadow: $boxShadow;
+        padding: 1rem 0;
+        animation: scroll 0.4s ease-in-out;
+
+        img {
+            width: 13rem;
+        }
+    }
+
+    .headRow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .toggling {
+        background: transparent;
+        border: none;
+        outline: none;
+
+        i {
+            font-size: 2rem;
+        }
+
+        @include respond (minWidth992) {
+            display: none;
+        }
+    }
+
+    nav {
+        @include respond (maxWidth992) {
+            background: $colorWhite;
+            position: fixed;
+            top: 80px;
+            right: 0;
+            height: 100%;
+            justify-content: flex-start;
+            width: 300px;
+            transform: translateX(100%);
+            transition: $transition;
+
+            .navList {
+                a {
+                    padding: 1rem !important;
+                    display: block;
+                }
+            }
+
+            &.toggled {
+                transform: none;
+            }
+        }
+    }
+
+    .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+
+        span {
+            &:first-child {
+                display: inline-block;
+                background: $colorPrimary;
+                color: $colorWhite;
+                width: 40px;
+                font-weight: bolder;
+                text-align: center;
+                aspect-ratio: 1 / 1;
+                font-size: 3rem;
+                border-radius: 1rem;
+                text-transform: uppercase;
+
+            }
+
+            &:last-child {
+                font-weight: 700;
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .navMenu {
+        display: flex;
+        justify-content: center;
+
+        .mobileBtn {
+            @include respond (minWidth992) {
+                display: none;
+            }
+        }
+
+        .navList {
+            position: relative;
+
+            &.has-submenu {
+                @include respond (minWidth992) {
+                    &:hover {
+                        .subMenu {
+                            display: block;
+                        }
+                    }
+                }
+
+                .dropDown {
+                    &::after {
+                        content: "\f0d7";
+                        display: inline-block;
+                        padding-left: 5px;
+                        padding-top: 0;
+                        transition: $transition;
+                        font-family: "Font Awesome 6 Free";
+                        font-weight: 900;
+                        font-size: 1.4rem;
+                    }
+                }
+
+                .subMenu {
+                    display: none;
+                    position: absolute;
+                    background: $colorWhite;
+                    min-width: 22rem;
+                    box-shadow: $boxShadow;
+                    border-radius: 0 0 1.6rem 1.6rem;
+                    border-top: 5px solid $colorPrimary;
+                    top: 25px;
+
+                    li {
+                        &:not(:last-child) {
+                            a {
+                                border-bottom: 1px solid #ccc;
+                            }
+                        }
+
+                        a {
+                            padding: 0.8rem 1.5rem;
+                            display: block;
+                        }
+                    }
+
+                    @include respond (maxWidth992) {
+                        display: none;
+                        position: static;
+
+                        &.open {
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            a {
+                font-size: 1.4rem;
+                font-weight: 500;
+                color: $colorDark;
+                padding: 5px 10px;
+                text-transform: uppercase;
+                transition: $transition;
+
+                &:hover {
+                    color: $colorPrimary;
+                }
+            }
+        }
+
+        @include respond (maxWidth992) {
+            flex-direction: column;
+        }
+    }
+
+    .freeAudit {
+        @include respond (maxWidth992) {
+            display: none;
+        }
+    }
+}

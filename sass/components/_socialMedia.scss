@@ -1,0 +1,26 @@
+@use "../abstracts" as *;
+
+.socialMedia{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    a{
+        color: $colorDark;
+        display: grid;
+        place-content: center;
+        width: 4rem;
+        aspect-ratio: 1 / 1;
+        border-radius: 100%;
+        border: 2px solid $colorDark;
+            transition: $transition;
+            &:hover{
+                background-color: $colorDark;
+                color: $colorWhite;
+            }
+        i{
+            font-size: 1.6rem;
+            transition: $transition;
+        }
+    }
+}

@@ -1,0 +1,5 @@
+@use "../abstracts" as *;
+@use "sass:color";
+.professionalSummary{
+    background: color.adjust($colorFooterBg, $lightness: 3%);
+}

@@ -1,0 +1,58 @@
+@use '../abstracts' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    &::before,
+    &::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    &::-webkit-scrollbar {
+        background-color: $colorWhite;
+        border-radius: 6px;
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 2rem;
+        background-color: $colorPrimary;
+    }
+}
+
+html {
+    font-size: 62.5%;
+
+    @include respond(maxWidth575) {
+        font-size: 56.25%;
+    }
+
+    @include respond(maxWidth768) {
+        font-size: 50%;
+    }
+
+    @include respond(maxWidth992) {
+        font-size: 75%;
+    }
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}

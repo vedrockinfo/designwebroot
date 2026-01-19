@@ -1,0 +1,97 @@
+@use "../abstracts" as *;
+
+footer {
+    background-color: $colorFooterBg;
+    padding-top: 5rem;
+    .ftrLogo{
+        margin-bottom: 3rem;
+        img{
+            width: 10rem;
+        }
+    }
+    .footerWidget {
+        color: $colorDark;
+        font-size: 2.4rem;
+    }
+
+    .brd {
+        width: 8rem;
+        height: 3px;
+        border-radius: 6px;
+        background-color: $colorDark;
+        margin-bottom: 2rem;
+    }
+
+    .quickLinks {
+        padding-left: 0;
+        margin-bottom: 0;
+
+        li {
+            &:not(:last-child) {
+                a {
+                    border-bottom: 1px solid #ccc;
+                }
+            }
+
+            a {
+                padding: 1rem;
+                display: block;
+                color: $colorDark;
+                transition: $transition;
+
+                &:hover {
+                    color: $colorPrimary;
+                    border-color: $colorPrimary;
+                }
+            }
+        }
+    }
+
+    .touch {
+        padding-left: 0;
+        margin-bottom: 0;
+
+        li {
+            color: $colorDark;
+            transition: $transition;
+            display: flex;
+            gap: 1rem;
+            align-items: baseline;
+            &:last-child{
+                padding: 1rem 0;
+                i{
+                    margin-right: 1rem;
+                }
+            }
+            i{
+                display: inline-block;
+            }
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #ccc;
+            }
+
+            a {
+                padding: 1rem;
+                display: inline-block;
+                width: 100%;
+                color: $colorDark;
+                transition: $transition;
+
+                &:hover {
+                    color: $colorPrimary;
+                    border-color: $colorPrimary;
+                }
+            }
+        }
+    }
+    .bottomFooter{
+        border-top: 1px solid #ccc;
+        padding: 1rem 0;
+        margin-top: 5rem;
+        p{
+            font-size: 1.4rem;
+            text-align: center;
+        }
+    }
+}

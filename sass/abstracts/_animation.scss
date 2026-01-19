@@ -1,0 +1,51 @@
+@keyframes scroll {
+    0% {
+        transform: translateY(-40%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(2rem);
+    }
+
+    50% {
+        transform: translateY(3.5rem);
+    }
+}
+
+@keyframes bounced {
+
+    0%,
+    100% {
+        transform: translateY(2rem);
+    }
+
+    50% {
+        transform: translateY(2.5rem);
+    }
+}
+
+@keyframes wave {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+@keyframes stripeMove {
+    0% {
+    background-position: 1.6rem 0;
+}
+100% {
+    background-position: 0 0;
+}
+}

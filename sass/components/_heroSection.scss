@@ -1,0 +1,129 @@
+@use '../abstracts' as *;
+
+.heroSection {
+    position: relative;
+    padding-top: 10rem;
+
+    .heroContent {
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 2rem;
+
+            @include respond (maxWidth575) {
+                text-align: center;
+            }
+
+            @include respond (minWidth575) {
+                font-size: 4rem;
+            }
+
+            @include respond (minWidth768) {
+                font-size: 4.8rem;
+            }
+
+            @include respond (minWidth992) {
+                font-size: 5rem;
+            }
+
+            @include respond (minWidth1200) {
+                font-size: 7rem;
+            }
+
+            @include respond (minWidth1800) {
+                font-size: 8rem;
+            }
+
+            span {
+                color: $colorPrimary;
+                display: inline-block;
+            }
+        }
+
+        p {
+            font-size: 2.4rem;
+            color: $colorDark;
+            font-weight: 300;
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        .btnWrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 4rem;
+
+            a {
+                &:first-child {
+                    @include btnDark();
+                }
+
+                &:last-child {
+                    @include btnLight();
+                }
+            }
+        }
+    }
+
+    &::after {
+        content: "";
+        background-image: url(../../images/bg_1.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left;
+        background-attachment: fixed;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .container {
+        position: relative;
+
+        .row {
+            align-items: center;
+        }
+    }
+
+    .imgWrapper {
+        position: relative;
+    }
+
+    .projects {
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+        background: $colorPrimary;
+        padding: 10px 18px;
+        border-radius: 1rem;
+        color: $colorWhite;
+        font-weight: 600;
+        font-size: $defaultFontSize;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        animation: bounce 3s ease-in-out 0s infinite normal none running;
+    }
+
+    .optimized {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: 12px 20px;
+        border-radius: 1rem;
+        color: $colorPrimary;
+        font-weight: normal;
+        font-size: $defaultFontSize;
+        background: $colorWhite;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        animation: bounced 2s ease-in-out 0s infinite normal none running;
+
+        i {
+            font-size: 2rem;
+        }
+    }
+}
