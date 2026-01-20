@@ -1,5 +1,14 @@
 @use "../abstracts" as *;
 @use "sass:color";
-.professionalSummary{
+
+.professionalSummary {
     background: color.adjust($colorFooterBg, $lightness: 3%);
+}
+
+.aboutSection {
+    .btnWrapper {
+        a {
+            @include btnDark();
+        }
+    }
 }
