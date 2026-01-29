@@ -3,6 +3,16 @@
 
 .professionalSummary {
     background: color.adjust($colorFooterBg, $lightness: 3%);
+
+    .row {
+        align-items: center;
+    }
+
+    .vedant {
+        border-radius: 1.6rem;
+        overflow: hidden;
+        box-shadow: $boxShadow;
+    }
 }
 
 .aboutSection {

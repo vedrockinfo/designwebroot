@@ -1,3 +1,33 @@
+// document.addEventListener("DOMContentLoaded", function () {
+//     const popup = document.getElementById("autoPopup");
+//     const closeBtn = document.querySelector(".close-popup");
+//     const popupKey = "popupShown";
+
+//     // 👉 Show popup only if not shown before
+//     if (!localStorage.getItem(popupKey)) {
+//         setTimeout(() => {
+//             popup.classList.add("active");
+//         }, 500);
+//     }
+
+//     // 👉 Close popup function
+//     function closePopup() {
+//         popup.classList.remove("active");
+//         localStorage.setItem(popupKey, "true");
+//     }
+
+//     // Close on close icon
+//     closeBtn.addEventListener("click", closePopup);
+
+//     // Close on outside click
+//     popup.addEventListener("click", function (e) {
+//         if (!e.target.closest(".popup-content")) {
+//             closePopup();
+//         }
+//     });
+// });
+
+
 // Header Fixed On Scroll 
 
 const myHeader = document.querySelector("header");
@@ -57,7 +87,7 @@ function startCounter(counter) {
 function checkCounter() {
     const section = document.querySelector('#counterSection');
     if (!section || started) return;
-    
+
     const rect = section.getBoundingClientRect();
 
     if (rect.top < window.innerHeight && !started) {

@@ -1,32 +1,49 @@
 @use '../abstracts' as *;
 @use 'sass:color';
 
-.whatIdo{
-    .btnDark{
+.whatIdo {
+    .btnDark {
         @include btnDark();
     }
 }
 
-.whyWork{
+.whyWork {
     background: $colorBg;
-    .headingPrimary, .headPara{
+
+    .headingPrimary,
+    .headPara {
         color: $colorWhite;
     }
-    .row{
+
+    .row {
         row-gap: 1rem;
     }
-    p{
-        color: color.adjust($colorWhite, $lightness: -40%)!important;
+
+    p {
+        color: color.adjust($colorWhite, $lightness: -40%) !important;
     }
 }
-.whoWeAre{
-    .linkWrapper{
+
+.whoWeAre {
+    .linkWrapper {
         margin-top: 3rem;
-        @include respond(maxWidth992){
+
+        @include respond(maxWidth992) {
             text-align: center
         }
-        a{
+
+        a {
             @include btnDark();
+        }
+    }
+}
+
+.recentWork {
+    .BtnWrapper {
+        text-align: center;
+        a {
+            @include btnDark();
+            text-transform: capitalize;
         }
     }
 }

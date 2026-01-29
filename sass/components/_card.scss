@@ -54,9 +54,11 @@
 
     &:hover {
         background: color.adjust($colorBg, $lightness: -2%);
-        .workCard__icon{
+
+        .workCard__icon {
             background: $colorPrimary;
-            i{
+
+            i {
                 color: $colorWhite;
             }
         }
@@ -77,31 +79,86 @@
             font-size: 2.4rem;
         }
     }
-    &__Content{
-        .headingSecondary{
-        margin-bottom: 0.7rem;
-        color: $colorWhite;
-    }
-    p{
-        margin-bottom: 0;
-        @include respond (minWidth768){
-            font-size: 1.4rem;
+
+    &__Content {
+        .headingSecondary {
+            margin-bottom: 0.7rem;
+            color: $colorWhite;
+        }
+
+        p {
+            margin-bottom: 0;
+
+            @include respond (minWidth768) {
+                font-size: 1.4rem;
+            }
         }
     }
-    }
 }
-.projectCard{
+
+.projectCard {
     display: block;
     box-shadow: $boxShadow;
     transition: $transition;
-    &:hover{
+
+    &__detail {
+        padding: 2rem 0 0;
+        text-align: center;
+        background: $colorWhite;
+
+        p {
+            padding: 0 2rem;
+        }
+
+        .linkWrapper {
+            margin-top: 3rem;
+
+            &.dark {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+
+                a {
+                    width: 50%;
+
+                    &:last-child {
+                        background: $colorLightPrimary;
+                        color: $colorPrimary;
+                    }
+                }
+            }
+
+            a {
+                display: block;
+                width: 100%;
+                padding: 1rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $colorWhite;
+                background: $colorPrimary;
+
+            }
+        }
+
+        .headingTertiary {
+            font-weight: 700;
+
+            @include respond (minWidth992) {
+                font-size: 2.4rem;
+            }
+        }
+    }
+
+    &:hover {
         transform: translateY(-3px);
     }
-    figure{
+
+    figure {
         overflow: hidden;
-        border:none;
+        border: none;
         aspect-ratio: 16 / 9.8;
-        img{
+
+        img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -110,18 +167,22 @@
 
         }
     }
-    .content{
+
+    .content {
         padding: 3rem 2rem;
-        p{
+
+        p {
             color: $colorDark;
         }
-        .visit{
+
+        .visit {
             @include btnLight();
             display: inline-block;
             text-transform: capitalize;
             padding-top: 6px;
             padding-bottom: 6px;
-            i{
+
+            i {
                 font-size: 1.2rem;
                 margin-left: 3px;
                 margin-bottom: 3px;
@@ -129,22 +190,26 @@
         }
     }
 }
-.blogCard{
+
+.blogCard {
     box-shadow: $boxShadow;
     border-radius: 2rem;
     overflow: hidden;
     transition: $transition;
     background: $colorWhite;
-    &:hover{
-        img{
+
+    &:hover {
+        img {
             transform: scale(1.1);
         }
     }
-    .featureImg{
+
+    .featureImg {
         position: relative;
         overflow: hidden;
         aspect-ratio: 16 / 9.8;
-        span{
+
+        span {
             position: absolute;
             top: 1rem;
             left: 1rem;
@@ -153,17 +218,20 @@
             padding: 5px 10px;
             font-size: 1.2rem;
         }
-        img{
+
+        img {
             transition: $transition;
             height: 100%;
             width: 100%;
             object-fit: cover;
         }
     }
-    .content{
+
+    .content {
         padding: 2rem
     }
-    .btnReadMore{
+
+    .btnReadMore {
         @include btnDark();
         padding: 7px 30px;
     }
