@@ -3,12 +3,15 @@
 footer {
     background-color: $colorFooterBg;
     padding-top: 5rem;
-    .ftrLogo{
+
+    .ftrLogo {
         margin-bottom: 3rem;
-        img{
+
+        img {
             width: 10rem;
         }
     }
+
     .footerWidget {
         color: $colorDark;
         font-size: 2.4rem;
@@ -38,6 +41,7 @@ footer {
                 display: block;
                 color: $colorDark;
                 transition: $transition;
+                pointer-events: none;
 
                 &:hover {
                     color: $colorPrimary;
@@ -57,13 +61,16 @@ footer {
             display: flex;
             gap: 1rem;
             align-items: baseline;
-            &:last-child{
+
+            &:last-child {
                 padding: 1rem 0;
-                i{
+
+                i {
                     margin-right: 1rem;
                 }
             }
-            i{
+
+            i {
                 display: inline-block;
             }
 
@@ -85,11 +92,13 @@ footer {
             }
         }
     }
-    .bottomFooter{
+
+    .bottomFooter {
         border-top: 1px solid #ccc;
         padding: 1rem 0;
         margin-top: 5rem;
-        p{
+
+        p {
             font-size: 1.4rem;
             text-align: center;
         }
