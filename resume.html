@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="language" content="English">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Design Web Root</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <!-- jQuery Linked -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <button class="sidebarToggle open" id="sidebarToggle">
+        <div class="sidebarOpen">
+            <div class="icon">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="sidebarClose">
+            <div class="icon">
+                <span></span><span></span>
+            </div>
+        </div>
+    </button>
+
+    <aside class="sidebar open" id="sideBar">
+        <div class="sidebar__header">
+            <div class="profile">
+                <img src="" alt="">
+            </div>
+            <h2 class="headingPrimary">Vedant Gupta</h2>
+            <p><span>UI Developer</span><span>Website Designer</span><span>Frontend Developer</span></p>
+        </div>
+        <nav class="sidebar__nav">
+            <ul>
+                <li>
+                    <a href="#hero" class="active">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Home</span>
+                        <span class="active-dot"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#about">
+                        <i class="fa-regular fa-user"></i>
+                        <span>About</span>
+                        <span class="active-dot"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#impact">
+                        <i class="fa-solid fa-compact-disc"></i>
+                        <span>Impact</span>
+                        <span class="active-dot"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#service">
+                        <i class="fa-brands fa-servicestack"></i>
+                        <span>Service</span>
+                        <span class="active-dot"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#global">
+                        <i class="fa-solid fa-wrench"></i>
+                        <span>Global Reach</span>
+                        <span class="active-dot"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                        <i class="fa-solid fa-fingerprint"></i>
+                        <span>Contact</span>
+                        <span class="active-dot"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="sidebar__footer">
+            <p><i class="fa-regular fa-copyright"></i> 2026 <a href="index.html" target="_blank">Design Web Root</a></p>
+        </div>
+    </aside>
+    <main class="mainContent sidebarOpened" id="mainContent">
+        <section class="heroSection" id="hero">
+            <div class="container">
+                <p class="mainTitle">Hi! I'm Vedant Gupta</p>
+                <h1 class="animatedText">
+                    <span data-text="Frontend Developer"></span>
+                    <span data-text="Website Designer"></span>
+                    <span data-text="UI Developer"></span>
+                </h1>
+                <div class="borderOne"></div>
+                <div class="spaceS"></div>
+                <h6 class="subHeading">Turning Ideas into High-Performance Web Solutions</h6>
+                <div class="textCenter">
+                    <p>With strong coordination skills and a problem-solving mindset, I help organizations grow by
+                        maximizing technical expertise and gaining valuable industry experience along the way.</p>
+                </div>
+            </div>
+            <div class="scrollDown">
+                <i class="fa-solid fa-chevron-down"></i>
+                <i class="fa-solid fa-chevron-down"></i>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="strength">
+                <span>Empathetic</span><span>Collaborative</span><span>Self-motivation</span><span>Meets
+                    deadlines</span>
+            </div>
+        </section>
+        <section class="h100" id="about">
+            <button id="menuToggle">☰</button>
+
+            <div id="overlay"></div>
+
+            <nav id="mobileNav">
+                <a href="#home" class="navLink">Home</a>
+                <a href="#about" class="navLink">About</a>
+                <a href="#services" class="navLink">Services</a>
+                <a href="#contact" class="navLink">Contact</a>
+            </nav>
+            <style>
+                #mobileNav {
+                    position: fixed;
+                    top: 0;
+                    left: -260px;
+                    width: 250px;
+                    height: 100vh;
+                    background: #222;
+                    transition: 0.3s;
+                }
+
+                #mobileNav.open {
+                    left: 0;
+                }
+
+                #overlay {
+                    position: fixed;
+                    inset: 0;
+                    background: rgba(0, 0, 0, 0.5);
+                    display: none;
+                }
+
+                #overlay.show {
+                    display: block;
+                }
+
+                body.noScroll {
+                    overflow: hidden;
+                }
+
+                .navLink {
+                    display: block;
+                    padding: 15px;
+                    color: white;
+                    text-decoration: none;
+                }
+            </style>
+            <script>
+                $(document).ready(function () {
+
+                    const menu = $('#mobileNav');
+                    const toggle = $('#menuToggle');
+                    const overlay = $('#overlay');
+                    const links = $('.navLink');
+
+                    // Open / Close Menu
+                    toggle.on('click', function () {
+                        menu.toggleClass('open');
+                        overlay.toggleClass('show');
+                        $('body').toggleClass('noScroll');
+                    });
+
+                    // Close when clicking overlay
+                    overlay.on('click', closeMenu);
+
+                    // Close when clicking any link
+                    links.on('click', closeMenu);
+
+                    function closeMenu() {
+                        menu.removeClass('open');
+                        overlay.removeClass('show');
+                        $('body').removeClass('noScroll');
+                    }
+
+                });
+
+            </script>
+        </section>
+        <section class="h100" style="--sectionBg:#0b4591;" id="impact">
+            <h2 class="headingPrimary">impact section</h2>
+        </section>
+        <section class="h100" style="--sectionBg:#ab259d;" id="service">
+            <h2 class="headingPrimary">service section</h2>
+        </section>
+        <section class="h100" style="--sectionBg:#701f42;" id="global">
+            <h2 class="headingPrimary">global section</h2>
+        </section>
+        <section class="h100" style="--sectionBg:#1f9148;" id="contact">
+            <h2 class="headingPrimary">contact section</h2>
+        </section>
+    </main>
+
+    <script src="assets/js/resume.js"></script>
+</body>
+
+</html>

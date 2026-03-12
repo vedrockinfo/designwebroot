@@ -12,6 +12,7 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/png">
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="https://dignityeducation.org/links/dist/vendor/css/bootstrap.min.css">
     <!-- Menu Script -->
     <script src="assets/js/myMenu.js"></script>
 </head>
@@ -68,15 +69,59 @@
                         </div>
                     </div>
                     <div class="col7">
+                        <form id="contactForm">
 
+                            <div class="mb-3">
+                                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <input type="text" name="phone" class="form-control" placeholder="Phone Number">
+                            </div>
+
+                            <div class="mb-3">
+                                <textarea name="message" class="form-control" placeholder="Message"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                Send Message
+                            </button>
+
+                            <div id="responseMsg" class="mt-3"></div>
+
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <script>mainFooter()</script>
-
+    <script src="https://dignityeducation.org/links/dist/vendor/js/jquery.min.js"></script>
+    <script src="https://dignityeducation.org/links/dist/vendor/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        $("#contactForm").submit(function (e) {
+
+            e.preventDefault();
+
+            $.ajax({
+                url: "contact_process.php",
+                type: "POST",
+                data: $(this).serialize(),
+
+                success: function (response) {
+                    $("#responseMsg").html(response);
+                    $("#contactForm")[0].reset();
+                }
+
+            });
+
+        });
+    </script>
 </body>
 
 </html>

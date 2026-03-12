@@ -1,7 +1,44 @@
 @use '../abstracts' as *;
 
-.freeAudit{
-    a{
+.freeAudit {
+    a {
         @include btnHeader();
+    }
+}
+
+
+.btnDark {
+    background: $colorPrimary;
+    padding: 0.8rem 4rem;
+    border: 2px solid $colorPrimary;
+    border-radius: 5px;
+    display: inline-block;
+    color: $colorWhite;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: $transition;
+
+    @include respond (maxWidth575) {
+        padding: 1rem;
+    }
+
+    &:hover {
+        background: transparent;
+        color: $colorPrimary;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.btnLight {
+    @extend .btnDark;
+    background: transparent;
+    color: $colorPrimary;
+
+    &:hover {
+        background: $colorPrimary;
+        color: $colorWhite;
     }
 }
